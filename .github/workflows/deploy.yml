@@ -12,6 +12,8 @@ jobs:
           node-version: 18
       - name: install dependecies
         run: npm ci
+      - name: eslint config
+        run: npm init @eslint/config
       - name: lint
         run: npm run lint
   test:
