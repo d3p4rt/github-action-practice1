@@ -1,0 +1,10 @@
+name: metadata
+on:
+  issues:
+    types: opened
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - name: output github contex
+        run: echo ${{ toJSON(github) }}
