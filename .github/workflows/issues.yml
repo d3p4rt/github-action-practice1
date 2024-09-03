@@ -1,10 +1,8 @@
-name: metadata
-on:
-  issues:
-    types: opened
+name: Handle issues
+on: issues
 jobs:
-  metadata:
+  output-info:
     runs-on: ubuntu-latest
     steps:
-      - name: output github contex
-        run: echo ${{ toJSON(github) }}
+      - name: Output event details
+        run: echo "${{ toJSON(github.event) }}"
